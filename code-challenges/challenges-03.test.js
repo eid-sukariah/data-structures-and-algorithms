@@ -10,6 +10,7 @@ This function should first create a new array. Then iterate over the input array
 Push each updated animal string into the new array. Return the new array. 
 
 HINT: Look at the tests to see how the callback functions are used.
+
 ------------------------------------------------------------------------------------------------ */
 
 function upper(str) {

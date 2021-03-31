@@ -9,8 +9,8 @@ Write a function named returnTen, takes in a string and uses split and splice to
 
 function returnTen(str){
   // Solution code here....
-  str.split('');
-  let stre = str.splice(-10);
+  let str1v = str.split('');
+  let stre = str1v.splice(-10);
   return stre;
 }
 
@@ -24,7 +24,12 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
-
+ let onlyNo = (val)=>{
+   if (typeof(val) === 'number'){
+     return val ;
+   }
+ }
+ return arr.filter(onlyNo)
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -37,6 +42,9 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
+  let newArr = arr.filter(ele => ele.includes('and'))
+  return newArr ;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

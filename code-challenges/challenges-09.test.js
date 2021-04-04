@@ -20,11 +20,12 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
-  let key=Object.keys(obj);
-  let value=Object.values(obj);
+
+  let ob1=Object.keys(obj);
+  let ob2=Object.values(obj);
   let ob=[];
-  for(let i=0;i<key.length;i++){
-    ob.push(`<li>${key[i]}: ${value[i]}</li>`);
+  for(let i=0;i<ob2.length;i++){
+    ob.push(`<li>${ob1[i]}: ${ob2[i]}</li>`);
   }
   return ob;
 }
@@ -38,6 +39,9 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+
+  const sum = arr.reduce((accumulator,value)=> accumulator += value , 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -54,8 +58,12 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((acu,val)=> acu+=val.purchasePrice,0)
-  return newArr
+
+  let sum = arr.reduce( function(accumulator,value,idx) {
+    accumulator = accumulator + value.purchasePrice;
+    return accumulator;
+  }, 0);
+  return sum;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -68,8 +76,12 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
-  let newArr = arr.reduce((a,val,idx)=>a=idx+1,0);
-  return newArr;
+
+  let counter = arr.reduce( function(accumulator) {
+    accumulator++;
+    return accumulator;
+  }, 0);
+  return counter;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -130,6 +142,13 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+
+  let names = arr.reduce( function(accumulator,value) {
+    accumulator.push(value.name);
+    return accumulator;
+  },[]);
+  return names;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

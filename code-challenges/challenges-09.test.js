@@ -20,6 +20,7 @@ Becomes:
 
 function transformToLis(obj){
   // Solution code here...
+
   let ob1=Object.keys(obj);
   let ob2=Object.values(obj);
   let ob=[];
@@ -38,6 +39,7 @@ Write a function named addValues that, given an array of numbers as input, uses 
 
 const addValues = (arr) => {
   // Solution code here...
+
   const sum = arr.reduce((accumulator,value)=> accumulator += value , 0);
   return sum;
 };
@@ -56,6 +58,7 @@ Write a function named addPurchases that, given an array of objects as input, us
 
 const addPurchases = (arr) => {
   // Solution code here...
+
   let sum = arr.reduce( function(accumulator,value,idx) {
     accumulator = accumulator + value.purchasePrice;
     return accumulator;
@@ -73,6 +76,7 @@ Note: You may not use the array's built-in length property.
 
 const countNumberOfElements = (arr) => {
   // Solution code here...
+
   let counter = arr.reduce( function(accumulator) {
     accumulator++;
     return accumulator;
@@ -138,11 +142,13 @@ let starWarsData = [{
 
 const returnNames = (arr) => {
   // Solution code here...
+
   let names = arr.reduce( function(accumulator,value) {
     accumulator.push(value.name);
     return accumulator;
   },[]);
   return names;
+
 };
 
 /* ------------------------------------------------------------------------------------------------

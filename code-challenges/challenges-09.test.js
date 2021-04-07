@@ -161,6 +161,11 @@ Note: You must use reduce for this challenge. You may not use the built-in .reve
 
 const reversedString = (str) => {
   // Solution code here...
+
+  let strArray = str.split('');  
+  const newArray = strArray.reduce((accumalator, val, idx) => {    return accumalator += strArray[strArray.length - idx - 1];  }, '')  
+  return newArray;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
